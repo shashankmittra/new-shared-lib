@@ -1,3 +1,5 @@
-def call(){
-	 ["git", "clone", "https://github.com/shashankmittra/simple-text.git"].execute()
+node {
+    stage('Clone sources') {
+        git url: 'https://github.com/shashankmittra/simple-text.git'
+    }
 }
