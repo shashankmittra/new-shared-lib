@@ -7,7 +7,7 @@ pipeline{
 		stage("clone"){
 			steps{
 				echo "Hello"
-				dir ('cloned'){
+				dir ('/cloned'){
 					first ()
 				}
 				echo "done"
