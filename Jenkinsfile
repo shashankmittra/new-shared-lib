@@ -6,13 +6,9 @@ pipeline{
 	stages{
 		stage("clone"){
 			steps{
-				echo "Hello"
-				dir ('/home/shashankmittra/cloned'){
-					first ()
-				}
-				echo 'Branch - ' + env.GIT_BRANCH
-				echo "done"
-				echo "Workspace location: ${env.WORKSPACE}"
+				echo "started cloning"
+				cloneRepo()
+				echo "done cloning"
 			}
 		}
 	}
