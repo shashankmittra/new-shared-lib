@@ -1,5 +1,5 @@
-def call(){
+def call(string branchName, string gitUrl){
 	dir('cloned'){
-		checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/shashankmittra/simple-text.git']]])
+		checkout([$class: 'GitSCM', branches: [[name: branchName]], userRemoteConfigs: [[url: gitUrl]]])
 	}
 }
