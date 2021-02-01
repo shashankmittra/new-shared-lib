@@ -7,7 +7,7 @@ pipeline{
 		stage("clone"){
 			steps{
 				echo "started cloning"
-				cloneRepo()
+				cloneRepo('*/main','https://github.com/shashankmittra/simple-text.git')
 				echo "done cloning"
 			}
 		}
